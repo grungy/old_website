@@ -1,1 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-01T12:05:41-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Josh Marks</title><subtitle>Josh Projects. All the time.</subtitle><author><name>Josh Marks</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-01T18:23:02-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Josh Marks</title><subtitle>Josh Projects. All the time.</subtitle><author><name>Josh Marks</name></author><entry><title type="html">Favorite Textbooks</title><link href="http://localhost:4000/posts/favorite-textbooks/" rel="alternate" type="text/html" title="Favorite Textbooks" /><published>2020-08-01T00:00:00-04:00</published><updated>2020-08-01T00:00:00-04:00</updated><id>http://localhost:4000/posts/favorite-textbooks</id><content type="html" xml:base="http://localhost:4000/posts/favorite-textbooks/">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/0521639220/&quot;&gt;The Design of CMOS Radio-Frequency Integrated Circuits&lt;/a&gt; by Thomas H. Lee&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/0133957241/&quot;&gt;High Speed Digital Design: A Handbook of Black Magic&lt;/a&gt; by Howard Johnson and Martin Graham&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/1108499945/&quot;&gt;The Art of Electronics: The x Chapters&lt;/a&gt; by Paul Horowitz and Winfield Hill&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/0521809266/&quot;&gt;The Art of Electronics&lt;/a&gt; by Paul Horowitz and Winfield Hill&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/0123865336/&quot;&gt;Switching Power Supplies A - Z&lt;/a&gt; by Sanjaya Maniktala&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.com/gp/product/1119258278/&quot;&gt;Understanding Delta-Sigma Data Converters&lt;/a&gt; by Shanthi Pavan, Richard Schreier and Gabor C. Temes&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Josh Marks</name></author><category term="posts" /><category term="books" /><category term="resources" /><summary type="html">The Design of CMOS Radio-Frequency Integrated Circuits by Thomas H. Lee</summary></entry><entry><title type="html">Favorite Youtube Resources</title><link href="http://localhost:4000/posts/favorite-youtube/" rel="alternate" type="text/html" title="Favorite Youtube Resources" /><published>2020-08-01T00:00:00-04:00</published><updated>2020-08-01T00:00:00-04:00</updated><id>http://localhost:4000/posts/favorite-youtube</id><content type="html" xml:base="http://localhost:4000/posts/favorite-youtube/">&lt;h3 id=&quot;electronics&quot;&gt;Electronics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/user/EEVblog&quot;&gt;EEVblog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCivA7_KLKWo43tFcCkFvydw&quot;&gt;Applied Science&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCiqd3GLTluk2s_IBt7p_LjA&quot;&gt;w2aew&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;fabricobbling--manufacturing&quot;&gt;Fabricobbling / Manufacturing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UChWv6Pn_zP0rI6lgGt3MyfA&quot;&gt;AvE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;math--physics&quot;&gt;Math / Physics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg&quot;&gt;Minute Physics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw&quot;&gt;3blue1brown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A&quot;&gt;Numberphile&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;control-theory&quot;&gt;Control Theory&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCm5mt-A4w61lknZ9lCsZtBw&quot;&gt;Steve Brunton&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ai--machine-learning&quot;&gt;A.I. / Machine Learning&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA&quot;&gt;Lex Fridman&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Josh Marks</name></author><category term="posts" /><category term="books" /><category term="resources" /><summary type="html">Electronics</summary></entry></feed>

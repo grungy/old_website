@@ -1,0 +1,507 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>current op-amp testing - Josh Marks</title>
+<meta name="description" content="Example of how to troubleshoot a current feedback op-amp.">
+
+
+  <meta name="author" content="Josh Marks">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Josh Marks">
+<meta property="og:title" content="current op-amp testing">
+<meta property="og:url" content="http://localhost:4000/portfolio/current-op-amp-testing/">
+
+
+  <meta property="og:description" content="Example of how to troubleshoot a current feedback op-amp.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/op-amp-testing/21_1_board.png">
+
+
+
+  <meta name="twitter:site" content="@grngy">
+  <meta name="twitter:title" content="current op-amp testing">
+  <meta name="twitter:description" content="Example of how to troubleshoot a current feedback op-amp.">
+  <meta name="twitter:url" content="http://localhost:4000/portfolio/current-op-amp-testing/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/op-amp-testing/21_1_board.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-08-01T18:23:02-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/portfolio/current-op-amp-testing/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Josh Marks",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Josh Marks Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/blob.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Josh "grungy" Marks
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/portfolio/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Gallery</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">Contact</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="http://placehold.it/350x250"
+             alt="logo">
+      
+      <h3>Role</h3>
+      <p>Electrical Engineer</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Determine why current design doesn’t work.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="current op-amp testing">
+    <meta itemprop="description" content="Example of how to troubleshoot a current feedback op-amp.">
+    <meta itemprop="datePublished" content="2020-08-01T18:23:02-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">current op-amp testing
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Summary:</strong> I replaced the feedback resistor elements with 510 ohm resistors for Rf and Rg. This gives a gain of two and the widest bandwidth, 1.4GHz, from the OPA695. Opamps behave much better. No more 416MHz ringing. I also removed the feedback capacitor because I read that this causes instability in the op amp.</p>
+
+<h2 id="211-board-testing">21:1 Board Testing:</h2>
+<h3 id="initial-results">Initial results:</h3>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/21_1_board.png" alt="Alt" />
+
+  <figcaption>Post-amp circuit with 21:1 divider circuit. Resistors R32 and R31 form the 21:1 divider.</figcaption>
+</figure>
+
+<p>The 21:1 divider is constructed with R31 and R32. The resistor divider formed by these two resistors minimizes the effect the cable and oscilloscope parasitics on the amplifier circuit. This gives a more realistic view of the behavior of the circuit. The following two figures show the value of the 21:1 divider. With the 21:1 divider it can be seen that the behavior of the two circuits is the same. The difference seen before was due to the effect of the cable and oscilloscope loading the circuit. <strong>What this meant was the circuit design was very sensitive to parasitic loading.</strong></p>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace1.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace2.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<h3 id="circuit-update">Circuit Update</h3>
+
+<p>I learned from a <a href="http://www.ti.com/lit/an/sloa021a/sloa021a.pdf">Texas Instruments App Note</a> that current feedback op amps (CFAs) are very particular about the values of the external components. The IC designers spend a lot of time looking for good values of external resistors. It is not as easy as a voltage feedback op amp. The recommended values are shown below in the table. I ended up choosing a gain of two because the OPA695 will have the widest bandwidth at this gain value, 1.4GHz.  To get a gain of 2 511 ohm resistors are used for the two feedback resistors. I put 510 ohm resistors on the test board because that was the closest part available in the lab. I also read that having a capacitor in the feedback loop of a CFA is very bad for stability so I removed the capacitor.</p>
+
+<p>Both of these changes drastically improved the response of the amplifier.</p>
+
+<p>The resistors Rf and Rg are the 511 ohm resistors in this schematic.</p>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/opa6952gain.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/opa695_resistor_values.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace3.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace4.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace5.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace6.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<h3 id="straight-post-amp-testing">Straight Post-amp Testing:</h3>
+
+<p>After seeing an improvement in the response of the 21:1 divider board I wanted to see what the improvement was for the straight post-amp test board.</p>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/post-amp-board.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<p>After modifying the circuit to also have a gain of 2 like I did for the 21:1 divider the response is greatly improved.</p>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace7.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace8.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace9.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<h3 id="bit-resolution">Bit Resolution:</h3>
+
+<p>A crude measurement of bit resolution can be done by measuring the rough noise level. This measurement is shown in the following image and is ~30mV.</p>
+
+<p>To get the amount of bits lost first the LSB must be calculated:</p>
+
+\[\frac{Max\_Voltage}{2^{num\_bits}} = \frac{voltage}{bit}\]
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">bits</th>
+      <th style="text-align: left">max voltage</th>
+      <th style="text-align: left">volt / lsb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">16</td>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">7.62939E-05</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Using our measured noise margin of 42mV the number of lost numbers can be calculated. 0.042/7.62939*10^-5 = 550. Taking the log base 2 of 550 gives us the number of bits lost: 9.104605043. And subtracting this value from 16 bits gives us the remaining bits we have: 6.895394957. So 6 or 7 bits. I also measured the signal generator directly and it had the same amount of noise. So, the noise level seems to be inherent in the scope or signal generator.</p>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace10.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<h3 id="5v-operation">5V operation</h3>
+
+<p>5V operation was accomplished with the power supplies set to +-6.5. The scope shows 2.5 volts because of the resistor divider on the output of the post amp.</p>
+
+<figure>
+  
+<img src="/assets/images/op-amp-testing/trace11.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-08-01T18:23:02-04:00">August 1, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=grngy&text=current+op-amp+testing%20http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fcurrent-op-amp-testing%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fcurrent-op-amp-testing%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fcurrent-op-amp-testing%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/portfolio/cmos-ic-yield-analysis/" class="pagination--pager" title="CMOS IC Yield Analysis
+">Previous</a>
+    
+    
+      <a href="/portfolio/staticbs/" class="pagination--pager" title="Static Electromagnetic Simulator
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/Grngy" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/grungy" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Josh Marks. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  </body>
+</html>

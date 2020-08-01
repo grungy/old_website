@@ -9,33 +9,37 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Josh Marks</title>
-<meta name="description" content="Josh Projects. All the time.">
+<!-- begin _includes/seo.html --><title>Static Electromagnetic Simulator - Josh Marks</title>
+<meta name="description" content="Ginger Gulp design system including logo mark, website design, and branding applications.">
 
 
   <meta name="author" content="Josh Marks">
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Josh Marks">
-<meta property="og:title" content="Josh Marks">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Static Electromagnetic Simulator">
+<meta property="og:url" content="http://localhost:4000/portfolio/staticbs/">
 
 
-  <meta property="og:description" content="Josh Projects. All the time.">
+  <meta property="og:description" content="Ginger Gulp design system including logo mark, website design, and branding applications.">
 
 
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/staticbs/regular_octagon_helmholtz_71.53mm_radius.png">
 
 
 
   <meta name="twitter:site" content="@grngy">
-  <meta name="twitter:title" content="Josh Marks">
-  <meta name="twitter:description" content="Josh Projects. All the time.">
-  <meta name="twitter:url" content="http://localhost:4000/">
+  <meta name="twitter:title" content="Static Electromagnetic Simulator">
+  <meta name="twitter:description" content="Ginger Gulp design system including logo mark, website design, and branding applications.">
+  <meta name="twitter:url" content="http://localhost:4000/portfolio/staticbs/">
 
   
     <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/staticbs/regular_octagon_helmholtz_71.53mm_radius.png">
     
   
 
@@ -43,6 +47,8 @@
 
 
 
+  <meta property="article:published_time" content="2020-08-01T18:23:02-04:00">
+
 
 
 
@@ -52,7 +58,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/portfolio/staticbs/">
 
 
 
@@ -114,7 +120,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -180,202 +186,135 @@
   
   <div class="sidebar sticky">
   
-
-
-<div itemscope itemtype="https://schema.org/Person">
-
   
-    <div class="author__avatar">
+    
       
-        <img src="/assets/images/bio-photo.JPG" alt="Josh Marks" itemprop="image">
+        <img src="http://placehold.it/350x250"
+             alt="logo">
       
+      <h3>Role</h3>
+      <p>Electrical Engineer</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Determine why current design doesn’t work.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Static Electromagnetic Simulator">
+    <meta itemprop="description" content="Ginger Gulp design system including logo mark, website design, and branding applications.">
+    <meta itemprop="datePublished" content="2020-08-01T18:23:02-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Static Electromagnetic Simulator
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>static-bs
+Is a simple 3D electro-magnetostatic biot-savart solving simulator written in python. I wrote this simulator for some research involving detecting the direction of flow of sea water with a static magnetic field. Charged particles in the water traveled through the magnetic field and caused a corresponding voltage gradient. Plates on a PCB board probed the voltage gradient and determined the direction of flow for the sea water. To my knowledge this has never been done before. Currently, I am writing a journal paper about this technique.</p>
+
+<p>Static-bs works by creating line segments of current and then adding up the cumulative effects of the different current segments at the defined observation points. The code is open source and available on my <a href="http://www.github.com/grungy/static-bs">github</a>.</p>
+
+<hr />
+
+<h2 id="what-questions-can-static-bs-answer">What questions can static-bs answer?</h2>
+<p>Static-bs can answer questions like these:</p>
+
+<ul>
+  <li>What is the B field at a specific point for a coil of wire without having to use a large volume of points like a finite element solver?</li>
+  <li>What does that 3D field look like?</li>
+  <li>How does the B field change if I have a bunch of coils oriented in a bunch of different ways?</li>
+  <li>What is the electric field if I have charged particles moving through the B field?</li>
+  <li>What is the voltage field I see from this electric field?</li>
+</ul>
+
+<h2 id="what-is-static-bs-not-good-at-doing">What is static-bs not good at doing?</h2>
+<ul>
+  <li>Evaluating a large number of points or a lot of line segments quickly</li>
+</ul>
+
+<h2 id="output-examples">Output examples</h2>
+<p>B field plot of two regular octagons with a radius of 71.53mm in Helmholtz coil configuration</p>
+
+<figure>
+  
+<img src="/assets/images/staticbs/regular_octagon_helmholtz_71.53mm_radius.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+<p>E field plot of two regular octagons with a radius of 71.53mm in a Helmholtz coil configuration and a fluid moving uniformly in the x direction at 1cm / s</p>
+
+<figure>
+  
+<img src="/assets/images/staticbs/regular_octagon_helmholtz_71.53mm_radius_e_field.png" alt="Alt" />
+
+  <figcaption></figcaption>
+</figure>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-08-01T18:23:02-04:00">August 1, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=grngy&text=Static+Electromagnetic+Simulator%20http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fstaticbs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fstaticbs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fstaticbs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/portfolio/current-op-amp-testing/" class="pagination--pager" title="current op-amp testing
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
     </div>
-  
 
-  <div class="author__content">
     
-      <h3 class="author__name" itemprop="name">Josh Marks</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
-        <p>Hack the Planet!</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Somewhere, USA</span>
-        </li>
-      
-
-      
-        
-          
-        
-          
-        
-          
-            <li><a href="https://twitter.com/Grngy" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
-          
-        
-          
-        
-          
-            <li><a href="https://github.com/grungy" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-          
-        
-          
-        
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
-
-<h3 class="archive__subtitle">Recent posts</h3>
-
-
-
-<div class="entries-list">
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/posts/favorite-youtube/" rel="permalink">Favorite Youtube Resources
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Electronics
-</p>
   </article>
-</div>
 
   
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/posts/favorite-textbooks/" rel="permalink">Favorite Textbooks
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-  The Design of CMOS Radio-Frequency Integrated Circuits by Thomas H. Lee
-
-</p>
-  </article>
-</div>
-
   
 </div>
 
-
-
-
-  </div>
-</div>
     </div>
 
     
