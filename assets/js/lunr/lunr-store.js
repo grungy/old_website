@@ -17,6 +17,12 @@ var store = [{
         "url": "http://localhost:4000/portfolio/current-op-amp-testing/",
         "teaser": "http://localhost:4000/assets/images/op-amp-testing/21_1_board.png"
       },{
+        "title": "Direct Current Potential Drop",
+        "excerpt":"                                                            ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/portfolio/eapsi/",
+        "teaser": "http://localhost:4000/assets/images/eapsi/dcpd-collar.png"
+      },{
         "title": "Static Electromagnetic Simulator",
         "excerpt":"static-bs Is a simple 3D electro-magnetostatic biot-savart solving simulator written in python. I wrote this simulator for some research involving detecting the direction of flow of sea water with a static magnetic field. Charged particles in the water traveled through the magnetic field and caused a corresponding voltage gradient. Plates...","categories": [],
         "tags": [],
@@ -33,5 +39,11 @@ var store = [{
         "excerpt":"Electronics      EEVblog   Applied Science   w2aew   Fabricobbling / Manufacturing      AvE   Math / Physics      Minute Physics   3blue1brown   Numberphile   Control Theory      Steve Brunton   A.I. / Machine Learning      Lex Fridman  ","categories": ["posts"],
         "tags": ["books","resources"],
         "url": "http://localhost:4000/posts/favorite-youtube/",
+        "teaser": null
+      },{
+        "title": "Sigma Delta Playthrough #1",
+        "excerpt":"Welcome, Welcome! The train is just leaving the station, so get comfortable because we’re in for a long ride towards understanding how to design Sigma-Delta converters. To play along at home you’ll need a copy of the book: “Understanding Sigma Delta Converters” by Shanthi Pavan, Richard Schreier and Gabor C....","categories": ["posts"],
+        "tags": ["books","playthrough"],
+        "url": "http://localhost:4000/posts/sigma-delta-playthrough-1/",
         "teaser": null
       },]
